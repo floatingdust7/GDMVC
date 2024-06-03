@@ -1,4 +1,5 @@
 import random
+#logging 库是一个用于记录程序运行时信息的模块，它提供了灵活的方式来捕获和输出日志信息。
 import logging
 import os
 import time
@@ -141,30 +142,43 @@ def cluster_by_multi_ways(
 
 def train_wrapper(train_func, dataset_name, args, seed=1234, gpu_id=0):
     logging.info(f"set random seed: {seed}, gpu_id: {gpu_id}")
+    #设置随机数种子，保证可复现性（这个东西可能受到库版本，硬件差异影响）
+    #设置pytorch的随机数种子
     torch.manual_seed(seed)
+    #设置cuda的随机数种子
     torch.cuda.manual_seed(seed)
+    #设置numpy的随机数种子
     np.random.seed(seed)
+    #设置 Python 标准库 random 模块的随机种子。
     random.seed(seed)
+    #设置环境变量 CUDA_VISIBLE_DEVICES，以控制 PyTorch 使用指定的 GPU。
     os.environ["CUDA_VISIBLE_DEVICES"] = str(gpu_id)
-
+    # 记录训练开始前的时间戳。
     start_time = time.time()
+    # 使用try-except 块来捕获训练过程中可能发生的任何异常，并记录异常信息。
     try:
+        # 在日志中记录训练函数的名称、数据集名称和参数，以及训练的开始。
         logging.info(
             f"train start: train_func: {train_func.__name__}, dataset: {dataset_name}, args: {args}"
         )
+        #调用训练函数
         results = train_func(dataset_name, args)
+        # 在日志中记录训练结束。
         logging.info("train end")
     except Exception as e:
         logging.exception(f"Exception occurred: {str(e)}")
+    # 记录训练过程的耗时，并以秒为单位输出，保留两位小数。
     logging.info(f"Elapsed time: {time.time() - start_time:.2f} seconds")
     return results
 
 
 def prepare_log(log_kind=1, log_dir=None, log_file_name=None):
     # log_kind:1表示输出到控制台，2表示输出到文件，3表示同时输出到控制台和文件
-
+    #定义了日志的格式，包括时间戳、文件名、行号、日志级别和消息。
     log_format = "%(asctime)s [%(filename)s:%(lineno)d] %(levelname)s: %(message)s"
+    #设置日志级别为 INFO，意味着所有 INFO 及以上级别的日志都会被记录。
     log_level = logging.INFO
+    #定义时间戳的格式
     date_format = "%Y-%m-%d %H:%M:%S"
 
     if log_kind == 1:
@@ -172,10 +186,13 @@ def prepare_log(log_kind=1, log_dir=None, log_file_name=None):
     elif log_kind == 2:
         if os.path.exists(log_dir) is False:
             os.makedirs(log_dir)
+        #取当前时间，并将其格式化为字符串，格式为 "YYYY-MM-DD HH:MM:SS"。
         cur_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(time.time()))
+        # 构造日志文件的完整路径，包括目录、日志文件基本名称、时间戳和文件扩展名。
         log_path = f"{log_dir}/{log_file_name}-{cur_time}.log"
         logging.basicConfig(
             filename=log_path,
+            #设置为 "a"，表示以追加模式打开文件，如果文件不存在则创建它。
             filemode="a",
             format=log_format,
             level=log_level,

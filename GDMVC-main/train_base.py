@@ -17,17 +17,23 @@ def train_base(
     dataset_name, args, is_finetune=True, is_fusion=True, is_graph=True, fixed_k=None
 ):
     """基础训练函数，其他训练函数均由该函数修改得到"""
+    #记录关键的训练参数，包括数据集名称 dataset_name 和参数字典 args。
     logging.info(f"dataset: {dataset_name}, args: {args}")
+    # 记录布尔参数is_finetune、is_fusion和is_graph，这些参数指示训练过程中是否执行微调、融合和图卷积网络的使用。
     logging.info(
         f"is_finetune: {is_finetune}, is_fusion: {is_fusion}, is_graph: {is_graph}"
     )
 
+    # 根据is_fusion参数的值，设置fusion_kind变量
     fusion_kind = "pinjiezv_pingjunlv_lxz" if is_fusion else "pinjiezv"
+    # 根据is_graph参数的值，从args字典中获取lam_tr（正则化系数），如果不使用图卷积网络，则将其设置为0。
     lam_tr = args["lam_tr"] if is_graph else 0
 
     logging.info("load data")
+    #调用 load_dataset 函数，传入 dataset_name，以获取数据集 X、标签 Y、聚类数量 n_cluster、样本数 n_sample 和视图数 n_view。
     X, Y, n_cluster, n_sample, n_view = load_dataset(dataset_name)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    #将数据集 X 中的数据转换为 PyTorch 张量，并将它们移动到设置的计算设备上。这里假设 X 中的数据是从 NumPy 数组加载的，并且需要转换为浮点数类型。
     X = [torch.from_numpy(x).float().to(device) for x in X]
 
     logging.info("compute similarity")

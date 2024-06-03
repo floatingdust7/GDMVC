@@ -1,0 +1,399 @@
+2024-06-03 19:28:23,125 [train_duibi.py:28] INFO: duibi progress: dataset_name[1/8]
+2024-06-03 19:28:23,125 [utils.py:144] INFO: set random seed: 1234, gpu_id: 0
+2024-06-03 19:28:23,127 [utils.py:161] INFO: train start: train_func: train_duibi, dataset: 100leaves, args: {'neighbor_max': 16, 'lam_tr': 0.1, 'lam_con': 0.1, 'fixed_k_wide_list': [2, 4, 6, 8, 10, 12, 14, 16], 'fixed_k_narrow_list': [6, 8, 10, 12, 14, 16], 'fixed_k_com_list': [2, 4, 6, 8, 10, 12, 14, 16], 'log_freq': 20, 'cluster_freq': 10, 'learning_rate': 0.001, 'layers': [256, 64], 'neighbor_init': 6, 'neighbor_incr': 5, 'pretrain_iter': 100, 'pretrain_epoch': 10, 'finetune_epoch': 100}
+2024-06-03 19:28:23,127 [train_base.py:20] INFO: dataset: 100leaves, args: {'neighbor_max': 16, 'lam_tr': 0.1, 'lam_con': 0.1, 'fixed_k_wide_list': [2, 4, 6, 8, 10, 12, 14, 16], 'fixed_k_narrow_list': [6, 8, 10, 12, 14, 16], 'fixed_k_com_list': [2, 4, 6, 8, 10, 12, 14, 16], 'log_freq': 20, 'cluster_freq': 10, 'learning_rate': 0.001, 'layers': [256, 64], 'neighbor_init': 6, 'neighbor_incr': 5, 'pretrain_iter': 100, 'pretrain_epoch': 10, 'finetune_epoch': 100}
+2024-06-03 19:28:23,128 [train_base.py:21] INFO: is_finetune: True, is_fusion: True, is_graph: True
+2024-06-03 19:28:23,128 [train_base.py:28] INFO: load data
+2024-06-03 19:28:23,140 [data.py:41] INFO: dataset:100leaves, n_cluster: 100, n_sample: 1600, n_view: 3
+2024-06-03 19:28:23,362 [train_base.py:33] INFO: compute similarity
+2024-06-03 19:28:26,880 [train_base.py:39] INFO: init model and optimizer
+2024-06-03 19:28:27,243 [train_base.py:46] INFO: start pretrain
+2024-06-03 19:28:27,243 [train_base.py:48] INFO: neighbor_num: 6, neighbor_max: 16
+2024-06-03 19:28:30,438 [train_base.py:67] INFO: Epoch[1/10], Step [20/100], L: 0.5243, Lre: 0.4841, Ltr: 0.40223369
+2024-06-03 19:28:31,368 [train_base.py:67] INFO: Epoch[1/10], Step [40/100], L: 0.4229, Lre: 0.3837, Ltr: 0.39220333
+2024-06-03 19:28:32,296 [train_base.py:67] INFO: Epoch[1/10], Step [60/100], L: 0.3827, Lre: 0.3442, Ltr: 0.38549954
+2024-06-03 19:28:33,227 [train_base.py:67] INFO: Epoch[1/10], Step [80/100], L: 0.3624, Lre: 0.3235, Ltr: 0.38862538
+2024-06-03 19:28:34,165 [train_base.py:67] INFO: Epoch[1/10], Step [100/100], L: 0.3496, Lre: 0.3107, Ltr: 0.38917002
+2024-06-03 19:28:34,281 [train_base.py:48] INFO: neighbor_num: 11, neighbor_max: 16
+2024-06-03 19:28:35,214 [train_base.py:67] INFO: Epoch[2/10], Step [20/100], L: 0.2589, Lre: 0.2280, Ltr: 0.30889723
+2024-06-03 19:28:36,147 [train_base.py:67] INFO: Epoch[2/10], Step [40/100], L: 0.2498, Lre: 0.2189, Ltr: 0.30912051
+2024-06-03 19:28:37,083 [train_base.py:67] INFO: Epoch[2/10], Step [60/100], L: 0.2440, Lre: 0.2130, Ltr: 0.30977416
+2024-06-03 19:28:38,020 [train_base.py:67] INFO: Epoch[2/10], Step [80/100], L: 0.2397, Lre: 0.2087, Ltr: 0.30995846
+2024-06-03 19:28:38,953 [train_base.py:67] INFO: Epoch[2/10], Step [100/100], L: 0.2361, Lre: 0.2050, Ltr: 0.31015572
+2024-06-03 19:28:39,033 [train_base.py:48] INFO: neighbor_num: 16, neighbor_max: 16
+2024-06-03 19:28:39,966 [train_base.py:67] INFO: Epoch[3/10], Step [20/100], L: 0.2059, Lre: 0.1751, Ltr: 0.30841255
+2024-06-03 19:28:40,903 [train_base.py:67] INFO: Epoch[3/10], Step [40/100], L: 0.1976, Lre: 0.1664, Ltr: 0.31192005
+2024-06-03 19:28:41,922 [train_base.py:67] INFO: Epoch[3/10], Step [60/100], L: 0.1932, Lre: 0.1620, Ltr: 0.31191701
+2024-06-03 19:28:42,863 [train_base.py:67] INFO: Epoch[3/10], Step [80/100], L: 0.1902, Lre: 0.1589, Ltr: 0.31250399
+2024-06-03 19:28:43,798 [train_base.py:67] INFO: Epoch[3/10], Step [100/100], L: 0.1878, Lre: 0.1565, Ltr: 0.31284839
+2024-06-03 19:28:43,877 [train_base.py:48] INFO: neighbor_num: 16, neighbor_max: 16
+2024-06-03 19:28:44,813 [train_base.py:67] INFO: Epoch[4/10], Step [20/100], L: 0.1695, Lre: 0.1416, Ltr: 0.27953851
+2024-06-03 19:28:45,746 [train_base.py:67] INFO: Epoch[4/10], Step [40/100], L: 0.1639, Lre: 0.1357, Ltr: 0.28265509
+2024-06-03 19:28:46,686 [train_base.py:67] INFO: Epoch[4/10], Step [60/100], L: 0.1611, Lre: 0.1328, Ltr: 0.28309721
+2024-06-03 19:28:47,618 [train_base.py:67] INFO: Epoch[4/10], Step [80/100], L: 0.1592, Lre: 0.1308, Ltr: 0.28385529
+2024-06-03 19:28:48,551 [train_base.py:67] INFO: Epoch[4/10], Step [100/100], L: 0.1577, Lre: 0.1292, Ltr: 0.28422722
+2024-06-03 19:28:48,641 [train_base.py:48] INFO: neighbor_num: 16, neighbor_max: 16
+2024-06-03 19:28:49,575 [train_base.py:67] INFO: Epoch[5/10], Step [20/100], L: 0.1343, Lre: 0.1113, Ltr: 0.23016044
+2024-06-03 19:28:50,501 [train_base.py:67] INFO: Epoch[5/10], Step [40/100], L: 0.1317, Lre: 0.1087, Ltr: 0.23049772
+2024-06-03 19:28:51,508 [train_base.py:67] INFO: Epoch[5/10], Step [60/100], L: 0.1303, Lre: 0.1072, Ltr: 0.23081093
+2024-06-03 19:28:52,449 [train_base.py:67] INFO: Epoch[5/10], Step [80/100], L: 0.1292, Lre: 0.1062, Ltr: 0.23092103
+2024-06-03 19:28:53,385 [train_base.py:67] INFO: Epoch[5/10], Step [100/100], L: 0.1284, Lre: 0.1053, Ltr: 0.23103356
+2024-06-03 19:28:53,462 [train_base.py:48] INFO: neighbor_num: 16, neighbor_max: 16
+2024-06-03 19:28:54,397 [train_base.py:67] INFO: Epoch[6/10], Step [20/100], L: 0.1132, Lre: 0.0943, Ltr: 0.18913518
+2024-06-03 19:28:55,331 [train_base.py:67] INFO: Epoch[6/10], Step [40/100], L: 0.1114, Lre: 0.0925, Ltr: 0.18914029
+2024-06-03 19:28:56,264 [train_base.py:67] INFO: Epoch[6/10], Step [60/100], L: 0.1104, Lre: 0.0915, Ltr: 0.18940079
+2024-06-03 19:28:57,198 [train_base.py:67] INFO: Epoch[6/10], Step [80/100], L: 0.1097, Lre: 0.0907, Ltr: 0.18960081
+2024-06-03 19:28:58,133 [train_base.py:67] INFO: Epoch[6/10], Step [100/100], L: 0.1091, Lre: 0.0901, Ltr: 0.18968479
+2024-06-03 19:28:58,210 [train_base.py:48] INFO: neighbor_num: 16, neighbor_max: 16
+2024-06-03 19:28:59,145 [train_base.py:67] INFO: Epoch[7/10], Step [20/100], L: 0.0956, Lre: 0.0800, Ltr: 0.15594733
+2024-06-03 19:29:00,078 [train_base.py:67] INFO: Epoch[7/10], Step [40/100], L: 0.0943, Lre: 0.0786, Ltr: 0.15636882
+2024-06-03 19:29:01,034 [train_base.py:67] INFO: Epoch[7/10], Step [60/100], L: 0.0935, Lre: 0.0778, Ltr: 0.15664181
+2024-06-03 19:29:01,969 [train_base.py:67] INFO: Epoch[7/10], Step [80/100], L: 0.0930, Lre: 0.0773, Ltr: 0.15679023
+2024-06-03 19:29:02,913 [train_base.py:67] INFO: Epoch[7/10], Step [100/100], L: 0.0925, Lre: 0.0768, Ltr: 0.15689960
+2024-06-03 19:29:02,995 [train_base.py:48] INFO: neighbor_num: 16, neighbor_max: 16
+2024-06-03 19:29:03,925 [train_base.py:67] INFO: Epoch[8/10], Step [20/100], L: 0.0834, Lre: 0.0704, Ltr: 0.13008350
+2024-06-03 19:29:04,865 [train_base.py:67] INFO: Epoch[8/10], Step [40/100], L: 0.0825, Lre: 0.0695, Ltr: 0.13022904
+2024-06-03 19:29:05,798 [train_base.py:67] INFO: Epoch[8/10], Step [60/100], L: 0.0820, Lre: 0.0690, Ltr: 0.13035071
+2024-06-03 19:29:06,737 [train_base.py:67] INFO: Epoch[8/10], Step [80/100], L: 0.0816, Lre: 0.0686, Ltr: 0.13041446
+2024-06-03 19:29:07,670 [train_base.py:67] INFO: Epoch[8/10], Step [100/100], L: 0.0813, Lre: 0.0683, Ltr: 0.13044985
+2024-06-03 19:29:07,754 [train_base.py:48] INFO: neighbor_num: 16, neighbor_max: 16
+2024-06-03 19:29:08,687 [train_base.py:67] INFO: Epoch[9/10], Step [20/100], L: 0.0741, Lre: 0.0630, Ltr: 0.11123028
+2024-06-03 19:29:09,627 [train_base.py:67] INFO: Epoch[9/10], Step [40/100], L: 0.0734, Lre: 0.0623, Ltr: 0.11121617
+2024-06-03 19:29:10,560 [train_base.py:67] INFO: Epoch[9/10], Step [60/100], L: 0.0730, Lre: 0.0619, Ltr: 0.11120083
+2024-06-03 19:29:11,495 [train_base.py:67] INFO: Epoch[9/10], Step [80/100], L: 0.0727, Lre: 0.0616, Ltr: 0.11117705
+2024-06-03 19:29:12,434 [train_base.py:67] INFO: Epoch[9/10], Step [100/100], L: 0.0725, Lre: 0.0614, Ltr: 0.11119428
+2024-06-03 19:29:12,752 [train_base.py:48] INFO: neighbor_num: 16, neighbor_max: 16
+2024-06-03 19:29:13,685 [train_base.py:67] INFO: Epoch[10/10], Step [20/100], L: 0.0679, Lre: 0.0581, Ltr: 0.09801494
+2024-06-03 19:29:14,620 [train_base.py:67] INFO: Epoch[10/10], Step [40/100], L: 0.0674, Lre: 0.0576, Ltr: 0.09793516
+2024-06-03 19:29:15,559 [train_base.py:67] INFO: Epoch[10/10], Step [60/100], L: 0.0671, Lre: 0.0573, Ltr: 0.09783034
+2024-06-03 19:29:16,898 [train_base.py:67] INFO: Epoch[10/10], Step [80/100], L: 0.0668, Lre: 0.0571, Ltr: 0.09780081
+2024-06-03 19:29:17,840 [train_base.py:67] INFO: Epoch[10/10], Step [100/100], L: 0.0667, Lre: 0.0569, Ltr: 0.09778100
+2024-06-03 19:29:17,924 [train_base.py:82] INFO: start fine tuning
+2024-06-03 19:29:20,195 [train_base.py:104] INFO: Epoch[20/100], L: 0.1345, Lre: 0.0709, Ltr: 0.0857, Lcon: 0.5505
+2024-06-03 19:29:21,135 [train_base.py:104] INFO: Epoch[40/100], L: 0.1204, Lre: 0.0680, Ltr: 0.0860, Lcon: 0.4375
+2024-06-03 19:29:22,073 [train_base.py:104] INFO: Epoch[60/100], L: 0.1149, Lre: 0.0666, Ltr: 0.0864, Lcon: 0.3969
+2024-06-03 19:29:23,006 [train_base.py:104] INFO: Epoch[80/100], L: 0.1118, Lre: 0.0658, Ltr: 0.0867, Lcon: 0.3734
+2024-06-03 19:29:23,952 [train_base.py:104] INFO: Epoch[100/100], L: 0.1096, Lre: 0.0652, Ltr: 0.0869, Lcon: 0.3568
+2024-06-03 19:29:26,099 [metrics.py:130] INFO: kmeans NMI=83.6, ACC=69.56, Fscore=61.11
+2024-06-03 19:29:26,100 [metrics.py:135] INFO: X0 Kmeans(1 times average) NMI=83.60¡À0.00, ACC=69.56¡À0.00, fscore=61.11¡À0.00
+2024-06-03 19:29:28,614 [metrics.py:130] INFO: kmeans NMI=96.87, ACC=94.0, Fscore=92.24
+2024-06-03 19:29:30,769 [metrics.py:130] INFO: kmeans NMI=96.69, ACC=92.75, Fscore=91.62
+2024-06-03 19:29:32,889 [metrics.py:130] INFO: kmeans NMI=96.23, ACC=91.44, Fscore=90.19
+2024-06-03 19:29:34,994 [metrics.py:130] INFO: kmeans NMI=96.23, ACC=91.88, Fscore=90.69
+2024-06-03 19:29:37,043 [metrics.py:130] INFO: kmeans NMI=96.17, ACC=90.94, Fscore=90.29
+2024-06-03 19:29:38,980 [metrics.py:130] INFO: kmeans NMI=97.19, ACC=94.19, Fscore=92.95
+2024-06-03 19:29:40,860 [metrics.py:130] INFO: kmeans NMI=96.45, ACC=92.75, Fscore=90.97
+2024-06-03 19:29:42,798 [metrics.py:130] INFO: kmeans NMI=96.7, ACC=92.94, Fscore=91.61
+2024-06-03 19:29:44,800 [metrics.py:130] INFO: kmeans NMI=96.81, ACC=93.5, Fscore=92.21
+2024-06-03 19:29:46,716 [metrics.py:130] INFO: kmeans NMI=96.88, ACC=93.44, Fscore=92.28
+2024-06-03 19:29:46,717 [metrics.py:135] INFO: pinjiezv_pingjunlv_lxz Kmeans(10 times average) NMI=96.62¡À0.32, ACC=92.78¡À1.02, fscore=91.50¡À0.89
+2024-06-03 19:29:46,958 [utils.py:167] INFO: train end
+2024-06-03 19:29:46,958 [utils.py:171] INFO: Elapsed time: 83.83 seconds
+2024-06-03 19:29:46,958 [train_duibi.py:28] INFO: duibi progress: dataset_name[2/8]
+2024-06-03 19:29:46,958 [utils.py:144] INFO: set random seed: 1234, gpu_id: 0
+2024-06-03 19:29:47,008 [utils.py:161] INFO: train start: train_func: train_duibi, dataset: coil20mv, args: {'neighbor_max': 72, 'lam_tr': 1, 'lam_con': 1, 'fixed_k_wide_list': [9, 18, 27, 36, 45, 54, 63, 72], 'fixed_k_narrow_list': [6, 11, 24, 33, 42, 51], 'fixed_k_com_list': [5, 10, 15, 20, 25, 30, 35, 40], 'log_freq': 20, 'cluster_freq': 10, 'learning_rate': 0.001, 'layers': [256, 64], 'neighbor_init': 6, 'neighbor_incr': 5, 'pretrain_iter': 100, 'pretrain_epoch': 10, 'finetune_epoch': 100}
+2024-06-03 19:29:47,008 [train_base.py:20] INFO: dataset: coil20mv, args: {'neighbor_max': 72, 'lam_tr': 1, 'lam_con': 1, 'fixed_k_wide_list': [9, 18, 27, 36, 45, 54, 63, 72], 'fixed_k_narrow_list': [6, 11, 24, 33, 42, 51], 'fixed_k_com_list': [5, 10, 15, 20, 25, 30, 35, 40], 'log_freq': 20, 'cluster_freq': 10, 'learning_rate': 0.001, 'layers': [256, 64], 'neighbor_init': 6, 'neighbor_incr': 5, 'pretrain_iter': 100, 'pretrain_epoch': 10, 'finetune_epoch': 100}
+2024-06-03 19:29:47,008 [train_base.py:21] INFO: is_finetune: True, is_fusion: True, is_graph: True
+2024-06-03 19:29:47,008 [train_base.py:28] INFO: load data
+2024-06-03 19:29:47,089 [data.py:41] INFO: dataset:coil20mv, n_cluster: 20, n_sample: 1440, n_view: 3
+2024-06-03 19:29:47,103 [train_base.py:33] INFO: compute similarity
+2024-06-03 19:29:47,293 [train_base.py:39] INFO: init model and optimizer
+2024-06-03 19:29:47,310 [train_base.py:46] INFO: start pretrain
+2024-06-03 19:29:47,311 [train_base.py:48] INFO: neighbor_num: 6, neighbor_max: 72
+2024-06-03 19:29:48,113 [train_base.py:67] INFO: Epoch[1/10], Step [20/100], L: 0.3239, Lre: 0.1485, Ltr: 0.17540388
+2024-06-03 19:29:48,900 [train_base.py:67] INFO: Epoch[1/10], Step [40/100], L: 0.2962, Lre: 0.1312, Ltr: 0.16502711
+2024-06-03 19:29:49,690 [train_base.py:67] INFO: Epoch[1/10], Step [60/100], L: 0.2873, Lre: 0.1254, Ltr: 0.16184416
+2024-06-03 19:29:50,488 [train_base.py:67] INFO: Epoch[1/10], Step [80/100], L: 0.2832, Lre: 0.1227, Ltr: 0.16047338
+2024-06-03 19:29:51,279 [train_base.py:67] INFO: Epoch[1/10], Step [100/100], L: 0.2808, Lre: 0.1210, Ltr: 0.15977100
+2024-06-03 19:29:51,354 [train_base.py:48] INFO: neighbor_num: 11, neighbor_max: 72
+2024-06-03 19:29:52,142 [train_base.py:67] INFO: Epoch[2/10], Step [20/100], L: 0.2503, Lre: 0.1120, Ltr: 0.13829221
+2024-06-03 19:29:52,928 [train_base.py:67] INFO: Epoch[2/10], Step [40/100], L: 0.2467, Lre: 0.1100, Ltr: 0.13668321
+2024-06-03 19:29:53,720 [train_base.py:67] INFO: Epoch[2/10], Step [60/100], L: 0.2451, Lre: 0.1088, Ltr: 0.13626650
+2024-06-03 19:29:54,511 [train_base.py:67] INFO: Epoch[2/10], Step [80/100], L: 0.2440, Lre: 0.1082, Ltr: 0.13580711
+2024-06-03 19:29:55,296 [train_base.py:67] INFO: Epoch[2/10], Step [100/100], L: 0.2433, Lre: 0.1078, Ltr: 0.13554868
+2024-06-03 19:29:55,365 [train_base.py:48] INFO: neighbor_num: 16, neighbor_max: 72
+2024-06-03 19:29:56,158 [train_base.py:67] INFO: Epoch[3/10], Step [20/100], L: 0.2686, Lre: 0.1118, Ltr: 0.15678978
+2024-06-03 19:29:56,948 [train_base.py:67] INFO: Epoch[3/10], Step [40/100], L: 0.2588, Lre: 0.1086, Ltr: 0.15016580
+2024-06-03 19:29:57,738 [train_base.py:67] INFO: Epoch[3/10], Step [60/100], L: 0.2560, Lre: 0.1074, Ltr: 0.14861575
+2024-06-03 19:29:58,528 [train_base.py:67] INFO: Epoch[3/10], Step [80/100], L: 0.2548, Lre: 0.1068, Ltr: 0.14798735
+2024-06-03 19:29:59,678 [train_base.py:67] INFO: Epoch[3/10], Step [100/100], L: 0.2540, Lre: 0.1064, Ltr: 0.14759415
+2024-06-03 19:29:59,747 [train_base.py:48] INFO: neighbor_num: 21, neighbor_max: 72
+2024-06-03 19:30:00,539 [train_base.py:67] INFO: Epoch[4/10], Step [20/100], L: 0.2721, Lre: 0.1136, Ltr: 0.15855046
+2024-06-03 19:30:01,330 [train_base.py:67] INFO: Epoch[4/10], Step [40/100], L: 0.2632, Lre: 0.1104, Ltr: 0.15274969
+2024-06-03 19:30:02,121 [train_base.py:67] INFO: Epoch[4/10], Step [60/100], L: 0.2609, Lre: 0.1095, Ltr: 0.15138251
+2024-06-03 19:30:02,919 [train_base.py:67] INFO: Epoch[4/10], Step [80/100], L: 0.2600, Lre: 0.1090, Ltr: 0.15095976
+2024-06-03 19:30:03,709 [train_base.py:67] INFO: Epoch[4/10], Step [100/100], L: 0.2594, Lre: 0.1086, Ltr: 0.15075438
+2024-06-03 19:30:03,776 [train_base.py:48] INFO: neighbor_num: 26, neighbor_max: 72
+2024-06-03 19:30:04,568 [train_base.py:67] INFO: Epoch[5/10], Step [20/100], L: 0.2651, Lre: 0.1157, Ltr: 0.14940688
+2024-06-03 19:30:05,357 [train_base.py:67] INFO: Epoch[5/10], Step [40/100], L: 0.2564, Lre: 0.1095, Ltr: 0.14694959
+2024-06-03 19:30:06,146 [train_base.py:67] INFO: Epoch[5/10], Step [60/100], L: 0.2535, Lre: 0.1079, Ltr: 0.14563531
+2024-06-03 19:30:06,931 [train_base.py:67] INFO: Epoch[5/10], Step [80/100], L: 0.2525, Lre: 0.1072, Ltr: 0.14529936
+2024-06-03 19:30:07,725 [train_base.py:67] INFO: Epoch[5/10], Step [100/100], L: 0.2520, Lre: 0.1069, Ltr: 0.14502659
+2024-06-03 19:30:07,789 [train_base.py:48] INFO: neighbor_num: 31, neighbor_max: 72
+2024-06-03 19:30:08,586 [train_base.py:67] INFO: Epoch[6/10], Step [20/100], L: 0.2469, Lre: 0.1073, Ltr: 0.13960859
+2024-06-03 19:30:09,379 [train_base.py:67] INFO: Epoch[6/10], Step [40/100], L: 0.2443, Lre: 0.1048, Ltr: 0.13943146
+2024-06-03 19:30:10,172 [train_base.py:67] INFO: Epoch[6/10], Step [60/100], L: 0.2434, Lre: 0.1044, Ltr: 0.13899241
+2024-06-03 19:30:10,969 [train_base.py:67] INFO: Epoch[6/10], Step [80/100], L: 0.2432, Lre: 0.1043, Ltr: 0.13890544
+2024-06-03 19:30:11,758 [train_base.py:67] INFO: Epoch[6/10], Step [100/100], L: 0.2427, Lre: 0.1042, Ltr: 0.13847405
+2024-06-03 19:30:11,827 [train_base.py:48] INFO: neighbor_num: 36, neighbor_max: 72
+2024-06-03 19:30:12,622 [train_base.py:67] INFO: Epoch[7/10], Step [20/100], L: 0.2488, Lre: 0.1055, Ltr: 0.14333981
+2024-06-03 19:30:13,411 [train_base.py:67] INFO: Epoch[7/10], Step [40/100], L: 0.2299, Lre: 0.0995, Ltr: 0.13036248
+2024-06-03 19:30:14,205 [train_base.py:67] INFO: Epoch[7/10], Step [60/100], L: 0.2275, Lre: 0.0976, Ltr: 0.12988189
+2024-06-03 19:30:15,016 [train_base.py:67] INFO: Epoch[7/10], Step [80/100], L: 0.2268, Lre: 0.0973, Ltr: 0.12955247
+2024-06-03 19:30:16,598 [train_base.py:67] INFO: Epoch[7/10], Step [100/100], L: 0.2263, Lre: 0.0971, Ltr: 0.12919313
+2024-06-03 19:30:16,680 [train_base.py:48] INFO: neighbor_num: 41, neighbor_max: 72
+2024-06-03 19:30:17,473 [train_base.py:67] INFO: Epoch[8/10], Step [20/100], L: 0.2051, Lre: 0.0889, Ltr: 0.11621189
+2024-06-03 19:30:18,263 [train_base.py:67] INFO: Epoch[8/10], Step [40/100], L: 0.2032, Lre: 0.0881, Ltr: 0.11508429
+2024-06-03 19:30:19,051 [train_base.py:67] INFO: Epoch[8/10], Step [60/100], L: 0.2025, Lre: 0.0878, Ltr: 0.11470144
+2024-06-03 19:30:19,844 [train_base.py:67] INFO: Epoch[8/10], Step [80/100], L: 0.2021, Lre: 0.0876, Ltr: 0.11446361
+2024-06-03 19:30:20,643 [train_base.py:67] INFO: Epoch[8/10], Step [100/100], L: 0.2019, Lre: 0.0874, Ltr: 0.11447287
+2024-06-03 19:30:20,720 [train_base.py:48] INFO: neighbor_num: 46, neighbor_max: 72
+2024-06-03 19:30:21,521 [train_base.py:67] INFO: Epoch[9/10], Step [20/100], L: 0.2005, Lre: 0.0936, Ltr: 0.10687088
+2024-06-03 19:30:22,319 [train_base.py:67] INFO: Epoch[9/10], Step [40/100], L: 0.1972, Lre: 0.0901, Ltr: 0.10707231
+2024-06-03 19:30:23,110 [train_base.py:67] INFO: Epoch[9/10], Step [60/100], L: 0.1905, Lre: 0.0866, Ltr: 0.10388583
+2024-06-03 19:30:23,896 [train_base.py:67] INFO: Epoch[9/10], Step [80/100], L: 0.1894, Lre: 0.0862, Ltr: 0.10322446
+2024-06-03 19:30:24,690 [train_base.py:67] INFO: Epoch[9/10], Step [100/100], L: 0.1893, Lre: 0.0861, Ltr: 0.10323178
+2024-06-03 19:30:24,767 [train_base.py:48] INFO: neighbor_num: 51, neighbor_max: 72
+2024-06-03 19:30:25,569 [train_base.py:67] INFO: Epoch[10/10], Step [20/100], L: 0.1824, Lre: 0.0858, Ltr: 0.09655886
+2024-06-03 19:30:26,375 [train_base.py:67] INFO: Epoch[10/10], Step [40/100], L: 0.1777, Lre: 0.0830, Ltr: 0.09462961
+2024-06-03 19:30:27,169 [train_base.py:67] INFO: Epoch[10/10], Step [60/100], L: 0.1767, Lre: 0.0827, Ltr: 0.09397469
+2024-06-03 19:30:27,991 [train_base.py:67] INFO: Epoch[10/10], Step [80/100], L: 0.1771, Lre: 0.0831, Ltr: 0.09392368
+2024-06-03 19:30:28,786 [train_base.py:67] INFO: Epoch[10/10], Step [100/100], L: 0.1762, Lre: 0.0823, Ltr: 0.09396401
+2024-06-03 19:30:28,858 [train_base.py:82] INFO: start fine tuning
+2024-06-03 19:30:29,658 [train_base.py:104] INFO: Epoch[20/100], L: 0.4573, Lre: 0.1157, Ltr: 0.0885, Lcon: 0.2531
+2024-06-03 19:30:30,461 [train_base.py:104] INFO: Epoch[40/100], L: 0.3034, Lre: 0.1072, Ltr: 0.0848, Lcon: 0.1113
+2024-06-03 19:30:31,256 [train_base.py:104] INFO: Epoch[60/100], L: 0.2828, Lre: 0.1071, Ltr: 0.0826, Lcon: 0.0931
+2024-06-03 19:30:33,783 [train_base.py:104] INFO: Epoch[80/100], L: 0.2789, Lre: 0.1057, Ltr: 0.0826, Lcon: 0.0906
+2024-06-03 19:30:34,582 [train_base.py:104] INFO: Epoch[100/100], L: 0.2776, Lre: 0.1054, Ltr: 0.0823, Lcon: 0.0898
+2024-06-03 19:30:34,818 [metrics.py:130] INFO: kmeans NMI=92.23, ACC=87.22, Fscore=85.21
+2024-06-03 19:30:34,819 [metrics.py:135] INFO: X0 Kmeans(1 times average) NMI=92.23¡À0.00, ACC=87.22¡À0.00, fscore=85.21¡À0.00
+2024-06-03 19:30:35,364 [metrics.py:130] INFO: kmeans NMI=98.45, ACC=98.96, Fscore=98.01
+2024-06-03 19:30:35,870 [metrics.py:130] INFO: kmeans NMI=98.64, ACC=99.1, Fscore=98.27
+2024-06-03 19:30:36,390 [metrics.py:130] INFO: kmeans NMI=96.83, ACC=93.61, Fscore=93.98
+2024-06-03 19:30:37,006 [metrics.py:130] INFO: kmeans NMI=98.64, ACC=99.1, Fscore=98.27
+2024-06-03 19:30:37,641 [metrics.py:130] INFO: kmeans NMI=98.64, ACC=99.1, Fscore=98.27
+2024-06-03 19:30:38,222 [metrics.py:130] INFO: kmeans NMI=98.64, ACC=99.1, Fscore=98.27
+2024-06-03 19:30:38,757 [metrics.py:130] INFO: kmeans NMI=98.45, ACC=98.96, Fscore=98.01
+2024-06-03 19:30:39,337 [metrics.py:130] INFO: kmeans NMI=98.57, ACC=99.03, Fscore=98.14
+2024-06-03 19:30:39,861 [metrics.py:130] INFO: kmeans NMI=98.45, ACC=98.96, Fscore=98.01
+2024-06-03 19:30:40,409 [metrics.py:130] INFO: kmeans NMI=98.57, ACC=99.03, Fscore=98.14
+2024-06-03 19:30:40,410 [metrics.py:135] INFO: pinjiezv_pingjunlv_lxz Kmeans(10 times average) NMI=98.39¡À0.53, ACC=98.50¡À1.63, fscore=97.74¡À1.26
+2024-06-03 19:30:40,411 [utils.py:167] INFO: train end
+2024-06-03 19:30:40,411 [utils.py:171] INFO: Elapsed time: 53.40 seconds
+2024-06-03 19:30:40,412 [train_duibi.py:28] INFO: duibi progress: dataset_name[3/8]
+2024-06-03 19:30:40,412 [utils.py:144] INFO: set random seed: 1234, gpu_id: 0
+2024-06-03 19:30:40,412 [utils.py:161] INFO: train start: train_func: train_duibi, dataset: handwritten_2v, args: {'neighbor_max': 200, 'lam_tr': 0.001, 'lam_con': 0.001, 'fixed_k_wide_list': [25, 50, 75, 100, 125, 150, 175, 200], 'fixed_k_narrow_list': [6, 15, 24, 33, 42, 51], 'fixed_k_com_list': [5, 10, 15, 20, 25, 30, 35, 40], 'log_freq': 20, 'cluster_freq': 10, 'learning_rate': 0.001, 'layers': [256, 64], 'neighbor_init': 6, 'neighbor_incr': 5, 'pretrain_iter': 100, 'pretrain_epoch': 10, 'finetune_epoch': 100}
+2024-06-03 19:30:40,413 [train_base.py:20] INFO: dataset: handwritten_2v, args: {'neighbor_max': 200, 'lam_tr': 0.001, 'lam_con': 0.001, 'fixed_k_wide_list': [25, 50, 75, 100, 125, 150, 175, 200], 'fixed_k_narrow_list': [6, 15, 24, 33, 42, 51], 'fixed_k_com_list': [5, 10, 15, 20, 25, 30, 35, 40], 'log_freq': 20, 'cluster_freq': 10, 'learning_rate': 0.001, 'layers': [256, 64], 'neighbor_init': 6, 'neighbor_incr': 5, 'pretrain_iter': 100, 'pretrain_epoch': 10, 'finetune_epoch': 100}
+2024-06-03 19:30:40,413 [train_base.py:21] INFO: is_finetune: True, is_fusion: True, is_graph: True
+2024-06-03 19:30:40,413 [train_base.py:28] INFO: load data
+2024-06-03 19:30:40,474 [data.py:41] INFO: dataset:handwritten_2v, n_cluster: 10, n_sample: 2000, n_view: 2
+2024-06-03 19:30:40,479 [train_base.py:33] INFO: compute similarity
+2024-06-03 19:30:40,628 [train_base.py:39] INFO: init model and optimizer
+2024-06-03 19:30:40,630 [train_base.py:46] INFO: start pretrain
+2024-06-03 19:30:40,630 [train_base.py:48] INFO: neighbor_num: 6, neighbor_max: 200
+2024-06-03 19:30:41,571 [train_base.py:67] INFO: Epoch[1/10], Step [20/100], L: 0.2831, Lre: 0.2827, Ltr: 0.44087809
+2024-06-03 19:30:42,456 [train_base.py:67] INFO: Epoch[1/10], Step [40/100], L: 0.2388, Lre: 0.2384, Ltr: 0.42819238
+2024-06-03 19:30:43,337 [train_base.py:67] INFO: Epoch[1/10], Step [60/100], L: 0.2212, Lre: 0.2207, Ltr: 0.43083745
+2024-06-03 19:30:44,222 [train_base.py:67] INFO: Epoch[1/10], Step [80/100], L: 0.2111, Lre: 0.2107, Ltr: 0.42902306
+2024-06-03 19:30:45,106 [train_base.py:67] INFO: Epoch[1/10], Step [100/100], L: 0.2043, Lre: 0.2039, Ltr: 0.42942885
+2024-06-03 19:30:45,387 [train_base.py:48] INFO: neighbor_num: 11, neighbor_max: 200
+2024-06-03 19:30:46,271 [train_base.py:67] INFO: Epoch[2/10], Step [20/100], L: 0.2022, Lre: 0.2018, Ltr: 0.39962611
+2024-06-03 19:30:47,159 [train_base.py:67] INFO: Epoch[2/10], Step [40/100], L: 0.1917, Lre: 0.1913, Ltr: 0.39637500
+2024-06-03 19:30:48,082 [train_base.py:67] INFO: Epoch[2/10], Step [60/100], L: 0.1864, Lre: 0.1860, Ltr: 0.39751822
+2024-06-03 19:30:48,967 [train_base.py:67] INFO: Epoch[2/10], Step [80/100], L: 0.1827, Lre: 0.1823, Ltr: 0.39854831
+2024-06-03 19:30:50,514 [train_base.py:67] INFO: Epoch[2/10], Step [100/100], L: 0.1799, Lre: 0.1795, Ltr: 0.39889234
+2024-06-03 19:30:50,602 [train_base.py:48] INFO: neighbor_num: 16, neighbor_max: 200
+2024-06-03 19:30:51,487 [train_base.py:67] INFO: Epoch[3/10], Step [20/100], L: 0.1751, Lre: 0.1747, Ltr: 0.41715544
+2024-06-03 19:30:52,374 [train_base.py:67] INFO: Epoch[3/10], Step [40/100], L: 0.1660, Lre: 0.1656, Ltr: 0.42146450
+2024-06-03 19:30:53,322 [train_base.py:67] INFO: Epoch[3/10], Step [60/100], L: 0.1615, Lre: 0.1611, Ltr: 0.42396125
+2024-06-03 19:30:54,221 [train_base.py:67] INFO: Epoch[3/10], Step [80/100], L: 0.1587, Lre: 0.1582, Ltr: 0.42512423
+2024-06-03 19:30:55,107 [train_base.py:67] INFO: Epoch[3/10], Step [100/100], L: 0.1565, Lre: 0.1561, Ltr: 0.42577282
+2024-06-03 19:30:55,200 [train_base.py:48] INFO: neighbor_num: 21, neighbor_max: 200
+2024-06-03 19:30:56,082 [train_base.py:67] INFO: Epoch[4/10], Step [20/100], L: 0.1539, Lre: 0.1535, Ltr: 0.41246378
+2024-06-03 19:30:56,980 [train_base.py:67] INFO: Epoch[4/10], Step [40/100], L: 0.1483, Lre: 0.1478, Ltr: 0.41502401
+2024-06-03 19:30:57,865 [train_base.py:67] INFO: Epoch[4/10], Step [60/100], L: 0.1456, Lre: 0.1452, Ltr: 0.41563219
+2024-06-03 19:30:58,754 [train_base.py:67] INFO: Epoch[4/10], Step [80/100], L: 0.1439, Lre: 0.1435, Ltr: 0.41618073
+2024-06-03 19:30:59,642 [train_base.py:67] INFO: Epoch[4/10], Step [100/100], L: 0.1426, Lre: 0.1422, Ltr: 0.41659227
+2024-06-03 19:30:59,740 [train_base.py:48] INFO: neighbor_num: 26, neighbor_max: 200
+2024-06-03 19:31:00,627 [train_base.py:67] INFO: Epoch[5/10], Step [20/100], L: 0.1439, Lre: 0.1435, Ltr: 0.39522302
+2024-06-03 19:31:01,513 [train_base.py:67] INFO: Epoch[5/10], Step [40/100], L: 0.1400, Lre: 0.1396, Ltr: 0.39867401
+2024-06-03 19:31:02,400 [train_base.py:67] INFO: Epoch[5/10], Step [60/100], L: 0.1382, Lre: 0.1378, Ltr: 0.39941210
+2024-06-03 19:31:03,301 [train_base.py:67] INFO: Epoch[5/10], Step [80/100], L: 0.1370, Lre: 0.1366, Ltr: 0.39975572
+2024-06-03 19:31:04,190 [train_base.py:67] INFO: Epoch[5/10], Step [100/100], L: 0.1362, Lre: 0.1358, Ltr: 0.40013012
+2024-06-03 19:31:04,450 [train_base.py:48] INFO: neighbor_num: 31, neighbor_max: 200
+2024-06-03 19:31:05,340 [train_base.py:67] INFO: Epoch[6/10], Step [20/100], L: 0.1322, Lre: 0.1319, Ltr: 0.37590411
+2024-06-03 19:31:06,228 [train_base.py:67] INFO: Epoch[6/10], Step [40/100], L: 0.1291, Lre: 0.1287, Ltr: 0.37697190
+2024-06-03 19:31:07,132 [train_base.py:67] INFO: Epoch[6/10], Step [60/100], L: 0.1277, Lre: 0.1273, Ltr: 0.37736401
+2024-06-03 19:31:08,020 [train_base.py:67] INFO: Epoch[6/10], Step [80/100], L: 0.1268, Lre: 0.1264, Ltr: 0.37794185
+2024-06-03 19:31:08,914 [train_base.py:67] INFO: Epoch[6/10], Step [100/100], L: 0.1261, Lre: 0.1258, Ltr: 0.37827021
+2024-06-03 19:31:09,004 [train_base.py:48] INFO: neighbor_num: 36, neighbor_max: 200
+2024-06-03 19:31:09,923 [train_base.py:67] INFO: Epoch[7/10], Step [20/100], L: 0.1239, Lre: 0.1235, Ltr: 0.35291857
+2024-06-03 19:31:10,856 [train_base.py:67] INFO: Epoch[7/10], Step [40/100], L: 0.1211, Lre: 0.1207, Ltr: 0.35399330
+2024-06-03 19:31:11,742 [train_base.py:67] INFO: Epoch[7/10], Step [60/100], L: 0.1199, Lre: 0.1196, Ltr: 0.35448754
+2024-06-03 19:31:12,635 [train_base.py:67] INFO: Epoch[7/10], Step [80/100], L: 0.1192, Lre: 0.1188, Ltr: 0.35478485
+2024-06-03 19:31:13,524 [train_base.py:67] INFO: Epoch[7/10], Step [100/100], L: 0.1186, Lre: 0.1183, Ltr: 0.35515970
+2024-06-03 19:31:13,616 [train_base.py:48] INFO: neighbor_num: 41, neighbor_max: 200
+2024-06-03 19:31:14,507 [train_base.py:67] INFO: Epoch[8/10], Step [20/100], L: 0.1158, Lre: 0.1154, Ltr: 0.33002287
+2024-06-03 19:31:15,396 [train_base.py:67] INFO: Epoch[8/10], Step [40/100], L: 0.1133, Lre: 0.1130, Ltr: 0.33089572
+2024-06-03 19:31:16,287 [train_base.py:67] INFO: Epoch[8/10], Step [60/100], L: 0.1123, Lre: 0.1120, Ltr: 0.33165538
+2024-06-03 19:31:17,177 [train_base.py:67] INFO: Epoch[8/10], Step [80/100], L: 0.1117, Lre: 0.1114, Ltr: 0.33218622
+2024-06-03 19:31:18,065 [train_base.py:67] INFO: Epoch[8/10], Step [100/100], L: 0.1112, Lre: 0.1109, Ltr: 0.33255309
+2024-06-03 19:31:18,158 [train_base.py:48] INFO: neighbor_num: 46, neighbor_max: 200
+2024-06-03 19:31:19,047 [train_base.py:67] INFO: Epoch[9/10], Step [20/100], L: 0.1053, Lre: 0.1050, Ltr: 0.30470723
+2024-06-03 19:31:19,936 [train_base.py:67] INFO: Epoch[9/10], Step [40/100], L: 0.1030, Lre: 0.1027, Ltr: 0.30604729
+2024-06-03 19:31:20,863 [train_base.py:67] INFO: Epoch[9/10], Step [60/100], L: 0.1021, Lre: 0.1018, Ltr: 0.30696046
+2024-06-03 19:31:21,756 [train_base.py:67] INFO: Epoch[9/10], Step [80/100], L: 0.1015, Lre: 0.1012, Ltr: 0.30760777
+2024-06-03 19:31:22,651 [train_base.py:67] INFO: Epoch[9/10], Step [100/100], L: 0.1011, Lre: 0.1008, Ltr: 0.30771625
+2024-06-03 19:31:22,741 [train_base.py:48] INFO: neighbor_num: 51, neighbor_max: 200
+2024-06-03 19:31:23,631 [train_base.py:67] INFO: Epoch[10/10], Step [20/100], L: 0.0998, Lre: 0.0995, Ltr: 0.28610778
+2024-06-03 19:31:24,525 [train_base.py:67] INFO: Epoch[10/10], Step [40/100], L: 0.0973, Lre: 0.0970, Ltr: 0.28474265
+2024-06-03 19:31:25,416 [train_base.py:67] INFO: Epoch[10/10], Step [60/100], L: 0.0965, Lre: 0.0962, Ltr: 0.28479630
+2024-06-03 19:31:26,308 [train_base.py:67] INFO: Epoch[10/10], Step [80/100], L: 0.0960, Lre: 0.0957, Ltr: 0.28524813
+2024-06-03 19:31:27,198 [train_base.py:67] INFO: Epoch[10/10], Step [100/100], L: 0.0957, Lre: 0.0954, Ltr: 0.28561884
+2024-06-03 19:31:27,303 [train_base.py:82] INFO: start fine tuning
+2024-06-03 19:31:28,199 [train_base.py:104] INFO: Epoch[20/100], L: 0.0956, Lre: 0.0950, Ltr: 0.2633, Lcon: 0.3666
+2024-06-03 19:31:29,095 [train_base.py:104] INFO: Epoch[40/100], L: 0.0933, Lre: 0.0927, Ltr: 0.2624, Lcon: 0.3562
+2024-06-03 19:31:30,000 [train_base.py:104] INFO: Epoch[60/100], L: 0.0926, Lre: 0.0920, Ltr: 0.2629, Lcon: 0.3493
+2024-06-03 19:31:30,897 [train_base.py:104] INFO: Epoch[80/100], L: 0.0922, Lre: 0.0915, Ltr: 0.2636, Lcon: 0.3423
+2024-06-03 19:31:31,791 [train_base.py:104] INFO: Epoch[100/100], L: 0.0919, Lre: 0.0913, Ltr: 0.2641, Lcon: 0.3363
+2024-06-03 19:31:31,965 [metrics.py:130] INFO: kmeans NMI=91.21, ACC=95.65, Fscore=91.75
+2024-06-03 19:31:31,966 [metrics.py:135] INFO: X0 Kmeans(1 times average) NMI=91.21¡À0.00, ACC=95.65¡À0.00, fscore=91.75¡À0.00
+2024-06-03 19:31:32,215 [metrics.py:130] INFO: kmeans NMI=92.1, ACC=96.25, Fscore=92.83
+2024-06-03 19:31:32,478 [metrics.py:130] INFO: kmeans NMI=92.1, ACC=96.25, Fscore=92.83
+2024-06-03 19:31:32,754 [metrics.py:130] INFO: kmeans NMI=92.1, ACC=96.25, Fscore=92.83
+2024-06-03 19:31:33,034 [metrics.py:130] INFO: kmeans NMI=92.1, ACC=96.25, Fscore=92.83
+2024-06-03 19:31:33,302 [metrics.py:130] INFO: kmeans NMI=92.1, ACC=96.25, Fscore=92.83
+2024-06-03 19:31:33,586 [metrics.py:130] INFO: kmeans NMI=92.1, ACC=96.25, Fscore=92.83
+2024-06-03 19:31:33,844 [metrics.py:130] INFO: kmeans NMI=92.1, ACC=96.25, Fscore=92.83
+2024-06-03 19:31:34,110 [metrics.py:130] INFO: kmeans NMI=92.1, ACC=96.25, Fscore=92.83
+2024-06-03 19:31:34,425 [metrics.py:130] INFO: kmeans NMI=92.1, ACC=96.25, Fscore=92.83
+2024-06-03 19:31:34,705 [metrics.py:130] INFO: kmeans NMI=92.1, ACC=96.25, Fscore=92.83
+2024-06-03 19:31:34,706 [metrics.py:135] INFO: pinjiezv_pingjunlv_lxz Kmeans(10 times average) NMI=92.10¡À0.00, ACC=96.25¡À0.00, fscore=92.83¡À0.00
+2024-06-03 19:31:34,707 [utils.py:167] INFO: train end
+2024-06-03 19:31:34,707 [utils.py:171] INFO: Elapsed time: 54.30 seconds
+2024-06-03 19:31:34,707 [train_duibi.py:28] INFO: duibi progress: dataset_name[4/8]
+2024-06-03 19:31:34,707 [utils.py:144] INFO: set random seed: 1234, gpu_id: 0
+2024-06-03 19:31:34,708 [utils.py:161] INFO: train start: train_func: train_duibi, dataset: msrcv1_6v, args: {'neighbor_max': 30, 'lam_tr': 0.01, 'lam_con': 0.001, 'fixed_k_wide_list': [2, 6, 10, 14, 18, 22, 26, 30], 'fixed_k_narrow_list': [5, 10, 15, 20, 25, 30], 'fixed_k_com_list': [3, 6, 9, 12, 15, 18, 21, 24], 'log_freq': 20, 'cluster_freq': 10, 'learning_rate': 0.001, 'layers': [256, 64], 'neighbor_init': 6, 'neighbor_incr': 5, 'pretrain_iter': 100, 'pretrain_epoch': 10, 'finetune_epoch': 100}
+2024-06-03 19:31:34,708 [train_base.py:20] INFO: dataset: msrcv1_6v, args: {'neighbor_max': 30, 'lam_tr': 0.01, 'lam_con': 0.001, 'fixed_k_wide_list': [2, 6, 10, 14, 18, 22, 26, 30], 'fixed_k_narrow_list': [5, 10, 15, 20, 25, 30], 'fixed_k_com_list': [3, 6, 9, 12, 15, 18, 21, 24], 'log_freq': 20, 'cluster_freq': 10, 'learning_rate': 0.001, 'layers': [256, 64], 'neighbor_init': 6, 'neighbor_incr': 5, 'pretrain_iter': 100, 'pretrain_epoch': 10, 'finetune_epoch': 100}
+2024-06-03 19:31:34,708 [train_base.py:21] INFO: is_finetune: True, is_fusion: True, is_graph: True
+2024-06-03 19:31:34,709 [train_base.py:28] INFO: load data
+2024-06-03 19:31:34,742 [data.py:41] INFO: dataset:msrcv1_6v, n_cluster: 7, n_sample: 210, n_view: 6
+2024-06-03 19:31:34,745 [train_base.py:33] INFO: compute similarity
+2024-06-03 19:31:34,843 [train_base.py:39] INFO: init model and optimizer
+2024-06-03 19:31:34,858 [train_base.py:46] INFO: start pretrain
+2024-06-03 19:31:34,858 [train_base.py:48] INFO: neighbor_num: 6, neighbor_max: 30
+2024-06-03 19:31:35,445 [train_base.py:67] INFO: Epoch[1/10], Step [20/100], L: 0.2377, Lre: 0.2335, Ltr: 0.41669130
+2024-06-03 19:31:36,092 [train_base.py:67] INFO: Epoch[1/10], Step [40/100], L: 0.1796, Lre: 0.1756, Ltr: 0.39465448
+2024-06-03 19:31:36,738 [train_base.py:67] INFO: Epoch[1/10], Step [60/100], L: 0.1636, Lre: 0.1597, Ltr: 0.39155531
+2024-06-03 19:31:37,253 [train_base.py:67] INFO: Epoch[1/10], Step [80/100], L: 0.1569, Lre: 0.1530, Ltr: 0.39065439
+2024-06-03 19:31:37,813 [train_base.py:67] INFO: Epoch[1/10], Step [100/100], L: 0.1531, Lre: 0.1492, Ltr: 0.39055008
+2024-06-03 19:31:37,827 [train_base.py:48] INFO: neighbor_num: 11, neighbor_max: 30
+2024-06-03 19:31:38,423 [train_base.py:67] INFO: Epoch[2/10], Step [20/100], L: 0.2234, Lre: 0.2189, Ltr: 0.45168322
+2024-06-03 19:31:38,978 [train_base.py:67] INFO: Epoch[2/10], Step [40/100], L: 0.2099, Lre: 0.2054, Ltr: 0.45137951
+2024-06-03 19:31:39,526 [train_base.py:67] INFO: Epoch[2/10], Step [60/100], L: 0.2046, Lre: 0.2001, Ltr: 0.45247966
+2024-06-03 19:31:40,026 [train_base.py:67] INFO: Epoch[2/10], Step [80/100], L: 0.2012, Lre: 0.1967, Ltr: 0.45195532
+2024-06-03 19:31:40,556 [train_base.py:67] INFO: Epoch[2/10], Step [100/100], L: 0.1988, Lre: 0.1943, Ltr: 0.45050225
+2024-06-03 19:31:40,572 [train_base.py:48] INFO: neighbor_num: 16, neighbor_max: 30
+2024-06-03 19:31:41,186 [train_base.py:67] INFO: Epoch[3/10], Step [20/100], L: 0.2112, Lre: 0.2062, Ltr: 0.50009429
+2024-06-03 19:31:41,772 [train_base.py:67] INFO: Epoch[3/10], Step [40/100], L: 0.1926, Lre: 0.1877, Ltr: 0.49388832
+2024-06-03 19:31:42,356 [train_base.py:67] INFO: Epoch[3/10], Step [60/100], L: 0.1876, Lre: 0.1827, Ltr: 0.49548137
+2024-06-03 19:31:42,893 [train_base.py:67] INFO: Epoch[3/10], Step [80/100], L: 0.1851, Lre: 0.1802, Ltr: 0.49628517
+2024-06-03 19:31:43,459 [train_base.py:67] INFO: Epoch[3/10], Step [100/100], L: 0.1835, Lre: 0.1785, Ltr: 0.49706969
+2024-06-03 19:31:43,475 [train_base.py:48] INFO: neighbor_num: 21, neighbor_max: 30
+2024-06-03 19:31:44,058 [train_base.py:67] INFO: Epoch[4/10], Step [20/100], L: 0.1777, Lre: 0.1729, Ltr: 0.47661540
+2024-06-03 19:31:44,638 [train_base.py:67] INFO: Epoch[4/10], Step [40/100], L: 0.1707, Lre: 0.1659, Ltr: 0.48095179
+2024-06-03 19:31:45,207 [train_base.py:67] INFO: Epoch[4/10], Step [60/100], L: 0.1683, Lre: 0.1635, Ltr: 0.48386121
+2024-06-03 19:31:45,833 [train_base.py:67] INFO: Epoch[4/10], Step [80/100], L: 0.1672, Lre: 0.1624, Ltr: 0.48499355
+2024-06-03 19:31:46,354 [train_base.py:67] INFO: Epoch[4/10], Step [100/100], L: 0.1659, Lre: 0.1610, Ltr: 0.48685211
+2024-06-03 19:31:46,366 [train_base.py:48] INFO: neighbor_num: 26, neighbor_max: 30
+2024-06-03 19:31:46,933 [train_base.py:67] INFO: Epoch[5/10], Step [20/100], L: 0.1686, Lre: 0.1641, Ltr: 0.45153186
+2024-06-03 19:31:47,487 [train_base.py:67] INFO: Epoch[5/10], Step [40/100], L: 0.1603, Lre: 0.1558, Ltr: 0.45284212
+2024-06-03 19:31:48,035 [train_base.py:67] INFO: Epoch[5/10], Step [60/100], L: 0.1580, Lre: 0.1535, Ltr: 0.45556876
+2024-06-03 19:31:48,676 [train_base.py:67] INFO: Epoch[5/10], Step [80/100], L: 0.1569, Lre: 0.1523, Ltr: 0.45619449
+2024-06-03 19:31:49,186 [train_base.py:67] INFO: Epoch[5/10], Step [100/100], L: 0.1560, Lre: 0.1515, Ltr: 0.45735356
+2024-06-03 19:31:49,201 [train_base.py:48] INFO: neighbor_num: 30, neighbor_max: 30
+2024-06-03 19:31:49,798 [train_base.py:67] INFO: Epoch[6/10], Step [20/100], L: 0.1541, Lre: 0.1499, Ltr: 0.41930112
+2024-06-03 19:31:50,288 [train_base.py:67] INFO: Epoch[6/10], Step [40/100], L: 0.1455, Lre: 0.1413, Ltr: 0.42196852
+2024-06-03 19:31:50,807 [train_base.py:67] INFO: Epoch[6/10], Step [60/100], L: 0.1434, Lre: 0.1391, Ltr: 0.42362440
+2024-06-03 19:31:51,303 [train_base.py:67] INFO: Epoch[6/10], Step [80/100], L: 0.1427, Lre: 0.1384, Ltr: 0.42578149
+2024-06-03 19:31:51,787 [train_base.py:67] INFO: Epoch[6/10], Step [100/100], L: 0.1418, Lre: 0.1376, Ltr: 0.42479348
+2024-06-03 19:31:51,801 [train_base.py:48] INFO: neighbor_num: 30, neighbor_max: 30
+2024-06-03 19:31:52,379 [train_base.py:67] INFO: Epoch[7/10], Step [20/100], L: 0.1329, Lre: 0.1291, Ltr: 0.38730642
+2024-06-03 19:31:52,843 [train_base.py:67] INFO: Epoch[7/10], Step [40/100], L: 0.1297, Lre: 0.1259, Ltr: 0.38266861
+2024-06-03 19:31:53,328 [train_base.py:67] INFO: Epoch[7/10], Step [60/100], L: 0.1283, Lre: 0.1245, Ltr: 0.38755175
+2024-06-03 19:31:53,845 [train_base.py:67] INFO: Epoch[7/10], Step [80/100], L: 0.1291, Lre: 0.1252, Ltr: 0.38376850
+2024-06-03 19:31:54,335 [train_base.py:67] INFO: Epoch[7/10], Step [100/100], L: 0.1274, Lre: 0.1235, Ltr: 0.38641667
+2024-06-03 19:31:54,350 [train_base.py:48] INFO: neighbor_num: 30, neighbor_max: 30
+2024-06-03 19:31:54,911 [train_base.py:67] INFO: Epoch[8/10], Step [20/100], L: 0.1157, Lre: 0.1124, Ltr: 0.33128053
+2024-06-03 19:31:55,416 [train_base.py:67] INFO: Epoch[8/10], Step [40/100], L: 0.1132, Lre: 0.1098, Ltr: 0.33482096
+2024-06-03 19:31:55,911 [train_base.py:67] INFO: Epoch[8/10], Step [60/100], L: 0.1130, Lre: 0.1096, Ltr: 0.33117053
+2024-06-03 19:31:56,396 [train_base.py:67] INFO: Epoch[8/10], Step [80/100], L: 0.1121, Lre: 0.1087, Ltr: 0.33356887
+2024-06-03 19:31:56,921 [train_base.py:67] INFO: Epoch[8/10], Step [100/100], L: 0.1117, Lre: 0.1084, Ltr: 0.33602864
+2024-06-03 19:31:56,936 [train_base.py:48] INFO: neighbor_num: 30, neighbor_max: 30
+2024-06-03 19:31:57,516 [train_base.py:67] INFO: Epoch[9/10], Step [20/100], L: 0.1064, Lre: 0.1035, Ltr: 0.28759015
+2024-06-03 19:31:58,012 [train_base.py:67] INFO: Epoch[9/10], Step [40/100], L: 0.1024, Lre: 0.0995, Ltr: 0.29183802
+2024-06-03 19:31:58,502 [train_base.py:67] INFO: Epoch[9/10], Step [60/100], L: 0.1011, Lre: 0.0982, Ltr: 0.29116189
+2024-06-03 19:31:58,979 [train_base.py:67] INFO: Epoch[9/10], Step [80/100], L: 0.1009, Lre: 0.0980, Ltr: 0.28908768
+2024-06-03 19:31:59,478 [train_base.py:67] INFO: Epoch[9/10], Step [100/100], L: 0.1002, Lre: 0.0973, Ltr: 0.29172593
+2024-06-03 19:31:59,491 [train_base.py:48] INFO: neighbor_num: 30, neighbor_max: 30
+2024-06-03 19:32:00,022 [train_base.py:67] INFO: Epoch[10/10], Step [20/100], L: 0.0967, Lre: 0.0942, Ltr: 0.25033197
+2024-06-03 19:32:00,509 [train_base.py:67] INFO: Epoch[10/10], Step [40/100], L: 0.0926, Lre: 0.0901, Ltr: 0.25293040
+2024-06-03 19:32:01,016 [train_base.py:67] INFO: Epoch[10/10], Step [60/100], L: 0.0914, Lre: 0.0889, Ltr: 0.25412196
+2024-06-03 19:32:01,514 [train_base.py:67] INFO: Epoch[10/10], Step [80/100], L: 0.0910, Lre: 0.0885, Ltr: 0.25400358
+2024-06-03 19:32:02,021 [train_base.py:67] INFO: Epoch[10/10], Step [100/100], L: 0.0907, Lre: 0.0881, Ltr: 0.25396559
+2024-06-03 19:32:02,034 [train_base.py:82] INFO: start fine tuning
+2024-06-03 19:32:02,705 [train_base.py:104] INFO: Epoch[20/100], L: 0.0969, Lre: 0.0916, Ltr: 0.2231, Lcon: 3.0471
+2024-06-03 19:32:03,279 [train_base.py:104] INFO: Epoch[40/100], L: 0.0901, Lre: 0.0855, Ltr: 0.2219, Lcon: 2.4472
+2024-06-03 19:32:03,877 [train_base.py:104] INFO: Epoch[60/100], L: 0.0856, Lre: 0.0812, Ltr: 0.2178, Lcon: 2.2704
+2024-06-03 19:32:04,428 [train_base.py:104] INFO: Epoch[80/100], L: 0.0846, Lre: 0.0802, Ltr: 0.2177, Lcon: 2.1632
+2024-06-03 19:32:04,994 [train_base.py:104] INFO: Epoch[100/100], L: 0.0841, Lre: 0.0798, Ltr: 0.2182, Lcon: 2.1018
+2024-06-03 19:32:05,317 [metrics.py:130] INFO: kmeans NMI=59.76, ACC=69.52, Fscore=60.07
+2024-06-03 19:32:05,318 [metrics.py:135] INFO: X0 Kmeans(1 times average) NMI=59.76¡À0.00, ACC=69.52¡À0.00, fscore=60.07¡À0.00
+2024-06-03 19:32:05,408 [metrics.py:130] INFO: kmeans NMI=84.72, ACC=92.38, Fscore=86.09
+2024-06-03 19:32:05,496 [metrics.py:130] INFO: kmeans NMI=85.46, ACC=92.86, Fscore=86.87
+2024-06-03 19:32:05,582 [metrics.py:130] INFO: kmeans NMI=85.46, ACC=92.86, Fscore=86.87
+2024-06-03 19:32:05,666 [metrics.py:130] INFO: kmeans NMI=84.72, ACC=92.38, Fscore=86.09
+2024-06-03 19:32:05,755 [metrics.py:130] INFO: kmeans NMI=83.69, ACC=91.9, Fscore=85.26
+2024-06-03 19:32:05,846 [metrics.py:130] INFO: kmeans NMI=84.72, ACC=92.38, Fscore=86.09
+2024-06-03 19:32:05,946 [metrics.py:130] INFO: kmeans NMI=84.72, ACC=92.38, Fscore=86.09
+2024-06-03 19:32:06,033 [metrics.py:130] INFO: kmeans NMI=85.46, ACC=92.86, Fscore=86.87
+2024-06-03 19:32:06,119 [metrics.py:130] INFO: kmeans NMI=84.72, ACC=92.38, Fscore=86.09
+2024-06-03 19:32:06,204 [metrics.py:130] INFO: kmeans NMI=85.46, ACC=92.86, Fscore=86.87
+2024-06-03 19:32:06,205 [metrics.py:135] INFO: pinjiezv_pingjunlv_lxz Kmeans(10 times average) NMI=84.91¡À0.54, ACC=92.52¡À0.31, fscore=86.32¡À0.51
+2024-06-03 19:32:06,206 [utils.py:167] INFO: train end
+2024-06-03 19:32:06,206 [utils.py:171] INFO: Elapsed time: 31.50 seconds
+2024-06-03 19:32:06,206 [train_duibi.py:28] INFO: duibi progress: dataset_name[5/8]
+2024-06-03 19:32:06,206 [utils.py:144] INFO: set random seed: 1234, gpu_id: 0
+2024-06-03 19:32:06,206 [utils.py:161] INFO: train start: train_func: train_duibi, dataset: orl, args: {'neighbor_max': 10, 'lam_tr': 1, 'lam_con': 0.001, 'fixed_k_wide_list': [3, 4, 5, 6, 7, 8, 9, 10], 'fixed_k_narrow_list': [5, 6, 7, 8, 9, 10], 'fixed_k_com_list': [3, 4, 5, 6, 7, 8, 9, 10], 'log_freq': 20, 'cluster_freq': 10, 'learning_rate': 0.001, 'layers': [256, 64], 'neighbor_init': 6, 'neighbor_incr': 5, 'pretrain_iter': 100, 'pretrain_epoch': 10, 'finetune_epoch': 100}
+2024-06-03 19:32:06,207 [train_base.py:20] INFO: dataset: orl, args: {'neighbor_max': 10, 'lam_tr': 1, 'lam_con': 0.001, 'fixed_k_wide_list': [3, 4, 5, 6, 7, 8, 9, 10], 'fixed_k_narrow_list': [5, 6, 7, 8, 9, 10], 'fixed_k_com_list': [3, 4, 5, 6, 7, 8, 9, 10], 'log_freq': 20, 'cluster_freq': 10, 'learning_rate': 0.001, 'layers': [256, 64], 'neighbor_init': 6, 'neighbor_incr': 5, 'pretrain_iter': 100, 'pretrain_epoch': 10, 'finetune_epoch': 100}
+2024-06-03 19:32:06,207 [train_base.py:21] INFO: is_finetune: True, is_fusion: True, is_graph: True
+2024-06-03 19:32:06,207 [train_base.py:28] INFO: load data
+2024-06-03 19:32:06,208 [utils.py:169] ERROR: Exception occurred: [Errno 2] No such file or directory: 'D:\\project_clustering\\clustering\\GDMVC-main/dataset/orl.mat'
+Traceback (most recent call last):
+  File "D:\ANACONDA\envs\pytorch\lib\site-packages\scipy\io\matlab\_mio.py", line 39, in _open_file
+    return open(file_like, mode), True
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\project_clustering\\clustering\\GDMVC-main/dataset/orl.mat'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\project_clustering\clustering\GDMVC-main\utils.py", line 165, in train_wrapper
+    results = train_func(dataset_name, args)
+  File "D:\project_clustering\clustering\GDMVC-main\train_duibi.py", line 10, in train_duibi
+    return train_base(dataset_name, args)
+  File "D:\project_clustering\clustering\GDMVC-main\train_base.py", line 29, in train_base
+    X, Y, n_cluster, n_sample, n_view = load_dataset(dataset_name)
+  File "D:\project_clustering\clustering\GDMVC-main\data.py", line 34, in load_dataset
+    X, Y = load_new_format_data(dataset_name)
+  File "D:\project_clustering\clustering\GDMVC-main\data.py", line 12, in load_new_format_data
+    data = sio.loadmat(data_path)
+  File "D:\ANACONDA\envs\pytorch\lib\site-packages\scipy\io\matlab\_mio.py", line 225, in loadmat
+    with _open_file_context(file_name, appendmat) as f:
+  File "D:\ANACONDA\envs\pytorch\lib\contextlib.py", line 135, in __enter__
+    return next(self.gen)
+  File "D:\ANACONDA\envs\pytorch\lib\site-packages\scipy\io\matlab\_mio.py", line 17, in _open_file_context
+    f, opened = _open_file(file_like, appendmat, mode)
+  File "D:\ANACONDA\envs\pytorch\lib\site-packages\scipy\io\matlab\_mio.py", line 45, in _open_file
+    return open(file_like, mode), True
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\project_clustering\\clustering\\GDMVC-main/dataset/orl.mat'
+2024-06-03 19:32:06,372 [utils.py:171] INFO: Elapsed time: 0.17 seconds

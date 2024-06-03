@@ -1,0 +1,24 @@
+2024-06-03 19:26:26,789 [train_duibi.py:28] INFO: duibi progress: dataset_name[1/8]
+2024-06-03 19:26:26,790 [utils.py:144] INFO: set random seed: 1234, gpu_id: 1
+2024-06-03 19:26:26,838 [utils.py:161] INFO: train start: train_func: train_duibi, dataset: 100leaves, args: {'neighbor_max': 16, 'lam_tr': 0.1, 'lam_con': 0.1, 'fixed_k_wide_list': [2, 4, 6, 8, 10, 12, 14, 16], 'fixed_k_narrow_list': [6, 8, 10, 12, 14, 16], 'fixed_k_com_list': [2, 4, 6, 8, 10, 12, 14, 16], 'log_freq': 20, 'cluster_freq': 10, 'learning_rate': 0.001, 'layers': [256, 64], 'neighbor_init': 6, 'neighbor_incr': 5, 'pretrain_iter': 100, 'pretrain_epoch': 10, 'finetune_epoch': 100}
+2024-06-03 19:26:26,839 [train_base.py:20] INFO: dataset: 100leaves, args: {'neighbor_max': 16, 'lam_tr': 0.1, 'lam_con': 0.1, 'fixed_k_wide_list': [2, 4, 6, 8, 10, 12, 14, 16], 'fixed_k_narrow_list': [6, 8, 10, 12, 14, 16], 'fixed_k_com_list': [2, 4, 6, 8, 10, 12, 14, 16], 'log_freq': 20, 'cluster_freq': 10, 'learning_rate': 0.001, 'layers': [256, 64], 'neighbor_init': 6, 'neighbor_incr': 5, 'pretrain_iter': 100, 'pretrain_epoch': 10, 'finetune_epoch': 100}
+2024-06-03 19:26:26,839 [train_base.py:21] INFO: is_finetune: True, is_fusion: True, is_graph: True
+2024-06-03 19:26:26,839 [train_base.py:28] INFO: load data
+2024-06-03 19:26:26,852 [data.py:41] INFO: dataset:100leaves, n_cluster: 100, n_sample: 1600, n_view: 3
+2024-06-03 19:26:27,444 [train_base.py:33] INFO: compute similarity
+2024-06-03 19:26:29,934 [utils.py:169] ERROR: Exception occurred: No CUDA GPUs are available
+Traceback (most recent call last):
+  File "D:\project_clustering\clustering\GDMVC-main\utils.py", line 165, in train_wrapper
+    results = train_func(dataset_name, args)
+  File "D:\project_clustering\clustering\GDMVC-main\train_duibi.py", line 10, in train_duibi
+    return train_base(dataset_name, args)
+  File "D:\project_clustering\clustering\GDMVC-main\train_base.py", line 35, in train_base
+    weights_mv, raw_weights_mv, laplacian_mv = update_graph(X, neighbor_num)
+  File "D:\project_clustering\clustering\GDMVC-main\utils.py", line 97, in update_graph
+    weights, raw_weights = cal_weights_via_CAN(x.t(), num_neighbors)
+  File "D:\project_clustering\clustering\GDMVC-main\utils.py", line 79, in cal_weights_via_CAN
+    raw_weights = raw_weights.cuda()
+  File "D:\ANACONDA\envs\pytorch\lib\site-packages\torch\cuda\__init__.py", line 247, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available
+2024-06-03 19:26:30,117 [utils.py:171] INFO: Elapsed time: 3.28 seconds

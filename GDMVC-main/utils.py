@@ -41,11 +41,12 @@ def distance(X, Y, square=True):
         result = torch.sqrt(result)
     return result
 
-
+#这个权重矩阵反映了数据点之间的相似性或接近程度，权重越大表示两个数据点越相似或距离越近。在图神经网络中，这样的权重矩阵可以用于特征传播，其中相似度高的节点之间会有更强的特征交换。
 def cal_weights_via_CAN(X, num_neighbors, links=0):
     size = X.shape[1]
     distances = distance(X, X)
     distances = torch.max(distances, torch.t(distances))
+    #对每一行的距离进行排序，得到每个数据点与其所有其他点的距离排序，_ 表示排序后的索引被丢弃。
     sorted_distances, _ = distances.sort(dim=1)
     top_k = sorted_distances[:, num_neighbors]
     # top_k是每个样本和它最远邻居的距离
@@ -90,6 +91,7 @@ def get_Laplacian_from_weights(weights):
 
 
 def update_graph(embedding_mv, num_neighbors):
+    #禁用梯度计算
     with torch.no_grad():
         weights_mv, raw_weights_mv, laplacian_mv = [], [], []
         for v in range(len(embedding_mv)):

@@ -5,15 +5,20 @@ from torch import nn
 
 
 class AdaGAE(torch.nn.Module):
+    #layer_dims：一个列表，指定了网络中每一层的维度。
+    #z_pass_linear：一个布尔值，默认为False。当设置为True时，表示在潜在空间和隐藏层之间会添加线性变换层。
     def __init__(self, layer_dims, z_pass_linear=False):
         super().__init__()
+        #创建了第一个线性变换的权重w1
         self.w1 = self.get_weight_initial([layer_dims[0], layer_dims[1]])
         self.w2 = self.get_weight_initial([layer_dims[1], layer_dims[2]])
 
+        #权重w1和w2是用于编码过程的，而z_pass_linear1和z_pass_linear2（如果使用）是在潜在空间和隐藏层之间传递信息的额外层，这有助于模型捕捉更复杂的数据结构。
         if z_pass_linear:
             self.z_pass_linear1 = torch.nn.Linear(layer_dims[2], layer_dims[1])
             self.z_pass_linear2 = torch.nn.Linear(layer_dims[1], layer_dims[2])
 
+    #权重初始化
     def get_weight_initial(self, shape):
         bound = np.sqrt(6.0 / (shape[0] + shape[1]))
         ini = torch.rand(shape) * 2 * bound - bound
@@ -21,8 +26,10 @@ class AdaGAE(torch.nn.Module):
 
     def forward(self, xi, Laplacian):
         # 编码
+        #.mm和.matmul都是点乘，但是.mm只能用于两个二维张量相乘，.matul要求参数至少有一个是二维的
         embedding = Laplacian.mm(xi.matmul(self.w1))
         embedding = torch.nn.functional.relu(embedding)
+        #嵌入向量再次与权重矩阵 self.w2 进行矩阵乘法，并通过拉普拉斯矩阵进行变换，这是图卷积的另一部分。
         embedding = Laplacian.mm(embedding.matmul(self.w2))
 
         # 重构

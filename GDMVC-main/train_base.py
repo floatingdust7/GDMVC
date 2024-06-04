@@ -83,7 +83,7 @@ def train_base(
             )
 
         # cluster_by_multi_ways(embedding_list, laplacian_mv, Y, n_cluster)
-
+    #微调过程不仅考虑了重构损失和迹损失，还额外引入了一致性损失，以确保不同视图的嵌入表示之间的一致性。
     if is_finetune:
         logging.info("start fine tuning")
         mse_loss_func = nn.MSELoss()

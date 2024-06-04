@@ -4,7 +4,45 @@ from sklearn.cluster import KMeans
 from sklearn.metrics import normalized_mutual_info_score as compute_nmi
 from sklearn.metrics.cluster._supervised import check_clusterings
 
+'''
+这段代码是一个Python脚本，用于执行聚类分析，特别是使用K-Means算法。它包括了多个函数，用于计算聚类结果、评估聚类质量，并记录日志。下面是对每个函数的分析：
 
+get_cluster_result(features, n_clusters):
+
+这个函数使用KMeans算法从sklearn.cluster模块对给定的特征进行聚类。
+features是待聚类的数据点的特征矩阵。
+n_clusters是聚类的数量。
+函数返回KMeans算法预测的每个数据点的聚类标签。
+compute_acc(Y, Y_pred):
+
+这个函数用于计算聚类的准确度。
+Y是真实的标签。
+Y_pred是预测的标签。
+它使用匈牙利算法（通过linear_sum_assignment函数）来找到最优的标签匹配，并计算准确度。
+compute_fscore(labels_true, labels_pred):
+
+这个函数计算F-score，它是精度和召回率的调和平均。
+labels_true是真实的聚类标签。
+labels_pred是预测的聚类标签。
+函数首先创建每个真实和预测聚类中样本的集合，然后计算精度和召回率，最后根据这些值计算F-score。
+cluster_one_time(features, labels, n_clusters):
+
+这个函数执行单次聚类，并计算几种不同的聚类评估指标。
+它首先调用get_cluster_result来获取聚类结果。
+然后，它调用compute_nmi、compute_acc和compute_fscore来计算归一化互信息(NMI)、准确度(ACC)和F-score。
+函数返回这些指标的值，并进行四舍五入。
+cluster(n_clusters, features, labels, count=1, desc="cluster_mine"):
+
+这个函数用于多次执行聚类，并计算评估指标的平均值和标准差。
+n_clusters是聚类的数量。
+features是待聚类的数据点的特征矩阵。
+labels是真实的聚类标签。
+count是聚类执行的次数，默认为1。
+desc是一个描述性字符串，用于日志记录。
+函数循环count次，每次调用cluster_one_time，并记录结果。
+最后，它计算并记录NMI、ACC和F-score的平均值和标准差。
+整个脚本的目的是提供一个工具，用于评估K-Means聚类算法在特定数据集上的性能。它通过计算不同的评估指标（NMI、ACC和F-score）来衡量聚类的质量，并提供了一种方法来评估算法的一致性和可靠性，通过多次运行聚类并计算结果的统计数据。此外，脚本还包括了日志记录功能，这对于调试和跟踪实验结果非常有用。
+'''
 def get_cluster_result(features, n_clusters):
     km = KMeans(n_clusters=n_clusters, n_init=10)
     pred = km.fit_predict(features)

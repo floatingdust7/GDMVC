@@ -16,11 +16,11 @@ def print_mat_file(mat_file_path):
     X = data["X"][0]
     X = [torch.from_numpy(x).float() for x in X]
     a=X[0]
-    # print(X)
-    print(a)
-    print(a.t())
+    print(X)
+    # print(a)
+    # print(a.t())
 
 
 # 替换为你的 .mat 文件的路径
-mat_file_path = 'D:\project_clustering\clustering\GDMVC-main\dataset\coil20mv.mat'
+mat_file_path = 'D:\project_clustering\python\GDMVC\GDMVC-main\dataset\coil20mv.mat'
 print_mat_file(mat_file_path)

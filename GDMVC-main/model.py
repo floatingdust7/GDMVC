@@ -53,6 +53,7 @@ class AdaGAE(torch.nn.Module):
 class AdaGAEMV(torch.nn.Module):
     def __init__(self, X, layers, device):
         layers_list = [[x.shape[1]] + layers for x in X]
+        #对于 layers_list 中的每个层尺寸列表 layer，创建一个 AdaGAE 实例，并将其添加到 gae_list 中。
         self.gae_list = [AdaGAE(layer).to(device) for layer in layers_list]
 
     def forward(self, X, lapacian_mv):

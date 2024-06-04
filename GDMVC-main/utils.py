@@ -114,6 +114,7 @@ def cluster_by_multi_ways(
     fusion_kind="pinjiezv_pingjunlv_lxz",
     view_index=0,
 ):
+    #这里对应到文章中，就是直接用特征或者使用特征和拉普拉斯矩阵的乘积作为最后的特征表示
     if fusion_kind == "pinjiezv":
         z = z_list[view_index].detach().cpu().numpy()
         cluster(n_cluster, z, Y, desc=f"X{view_index}")

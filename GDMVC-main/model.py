@@ -49,7 +49,7 @@ class AdaGAE(torch.nn.Module):
         tr_loss = torch.trace(embeding.t().matmul(L).matmul(embeding)) / size
         return re_loss, tr_loss
 
-
+'''AdaGAE 是构建图卷积自编码器的基本单元，而 AdaGAEMV 是将这个基本单元扩展到多视图图数据的场景中，使得模型能够同时处理和学习多个图的信息'''
 class AdaGAEMV(torch.nn.Module):
     def __init__(self, X, layers, device):
         layers_list = [[x.shape[1]] + layers for x in X]
